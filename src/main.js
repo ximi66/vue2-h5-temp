@@ -4,12 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './config/rem'
+import axios from "./axios/axiosConfig";
 
 import './assets/css/reset.css'
 import './assets/css/common.css'
 
-
 Vue.config.productionTip = false
+axios.defaults.baseURL = process.env.API;
 
 /* eslint-disable no-new */
 new Vue({

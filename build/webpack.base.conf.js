@@ -8,7 +8,14 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
+let publicPath;
+if (process.env.NODE_ENV === 'production' ) {
+  publicPath = config.build.assetsPublicPath
+} else if (process.env.NODE_ENV === 'test') {
+  publicPath = config.test.assetsPublicPath
+} else {
+  publicPath = config.dev.assetsPublicPath
+}
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -18,9 +25,10 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    // publicPath: process.env.NODE_ENV === 'production'
+    //   ? config.build.assetsPublicPath
+    //   : config.dev.assetsPublicPath
+    publicPath: publicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
