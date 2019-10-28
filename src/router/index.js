@@ -3,14 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const HelloWorld = () => import('../components/HelloWorld')
+const demo = () => import('../components/demo')
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'demo',
+      component: demo
     }
   ]
 })

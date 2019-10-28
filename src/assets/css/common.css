@@ -1,0 +1,55 @@
+.inline-block{
+  display: inline-block;
+}
+
+.block{
+  display: block;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.none{
+  display: none!important;
+}
+
+.block{
+  display: block!important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+/*单行溢出*/
+.one-txt-cut{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
