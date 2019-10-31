@@ -1,21 +1,21 @@
 <template>
   <div class="demo">
-    <input type="button" value="111">
-    <input type="text">
-    <a href="">wpde</a>
-    <header>ssss</header>
+    <headerBar titleTxt="“电影的文学魅影”放映交流活动"></headerBar>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'demo',
-  data () {
-    return {
+  import headerBar from './common/headerBar'
 
+  export default {
+    name: 'demo',
+    data() {
+      return {}
+    },
+    components: {
+      headerBar
     }
   }
-}
 </script>
 
 <style scoped>
